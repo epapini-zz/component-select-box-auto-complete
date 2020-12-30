@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
 `;
 
 export const Content = styled.div`
@@ -51,6 +52,8 @@ export const ContentBox = styled.div`
     }
     :active {
       font-weight: 700;
+      position: relative;
+      z-index: 9998;
     }
   }
 `;
@@ -64,8 +67,14 @@ export const Select = styled.div`
 export const List = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  border-radius: 8px;
   max-width: 500px;
   margin: 0px 5px;
+  background: #fafafa;
+
+  position: absolute;
+  z-index: 9998;
 `;
 
 export const ListItem = styled.div`

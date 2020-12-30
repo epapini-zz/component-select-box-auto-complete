@@ -38,6 +38,8 @@ function App() {
     <>
       <h1> Componenet SelectBox com AutoComplete</h1>
       <SelectBoxAutoComplete data={dados} />
+
+      <input></input>
     </>
   );
 }

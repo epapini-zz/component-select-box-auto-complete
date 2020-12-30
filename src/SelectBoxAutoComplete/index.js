@@ -21,6 +21,7 @@ function SelectBoxAutoComplete({ data }) {
   const [search, setSearch] = useState("");
   const wrapperRef = useRef(null);
 
+  //filtra a lista por nome baseando no que foi escrito no input
   useEffect(() => {
     const lista = data.filter(
       (item) => item.name.toLowerCase().indexOf(search) > -1
@@ -28,6 +29,7 @@ function SelectBoxAutoComplete({ data }) {
     setOptions(lista);
   }, [search]);
 
+  //remove o dropdown qdo e clicando fora do elemento
   useEffect(() => {
     window.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -42,6 +44,7 @@ function SelectBoxAutoComplete({ data }) {
     }
   };
 
+  //insere a opçao selecionada no menu dropdown no input
   const updateList = (update) => {
     setSearch(update);
     setDisplay(false);
