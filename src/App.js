@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./global.css";
+
+import SelectBox from "./SelectBox";
+import SelectBoxAutoComplete from "./SelectBoxAutoComplete";
+
+const dados = [
+  {
+    id: 1,
+    name: "Emilio",
+    image: "foto2",
+  },
+  {
+    id: 2,
+    name: "Lucas",
+    image: "foto2",
+  },
+  {
+    id: 3,
+    name: "Miguel",
+    image: "foto3",
+  },
+  {
+    id: 4,
+    name: "Joao",
+    image: "foto4",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SelectBox data={dados} />
+      <h1>AutoComplete</h1>
+      <SelectBoxAutoComplete data={dados} />
+    </>
   );
 }
 
